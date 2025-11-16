@@ -8,6 +8,6 @@ package watertank;
  *
  * @author Hp
  */
-public interface WaterLevelObserver {
-    public void update(int waterLevel);
+public interface WaterLevelController {
+    public void setWaterLevel(int waterLevel);
 }
