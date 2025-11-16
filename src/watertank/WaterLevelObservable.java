@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author Hp
  */
-public class WaterLevelObservable {
+public class WaterLevelObservable { //Controll Room-----------
     private int waterLevel;
     private ArrayList<WaterLevelObserver> observerList=new ArrayList<>();
     
