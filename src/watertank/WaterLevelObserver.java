@@ -9,5 +9,5 @@ package watertank;
  * @author Hp
  */
 public interface WaterLevelObserver {
-    
+    public void update(int waterLevel);
 }
