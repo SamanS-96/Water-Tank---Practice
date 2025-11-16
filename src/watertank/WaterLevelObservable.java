@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author Hp
  */
-public class WaterLevelObservable { //Controll Room-----------
+public class WaterLevelObservable implements WaterLevelController { //Controll Room-----------
     private int waterLevel;
     private ArrayList<WaterLevelObserver> observerList=new ArrayList<>();
     
@@ -23,6 +23,14 @@ public class WaterLevelObservable { //Controll Room-----------
     public void notifyObservers(){
         for (WaterLevelObserver waterLevelObserver : observerList) {
            waterLevelObserver.update(waterLevel);
+        }
+    }
+
+    @Override
+    public void setWaterLevel(int waterLevel) {
+        if(this.waterLevel!=waterLevel){
+            this.waterLevel=waterLevel;
+            notifyObservers();
         }
     }
 }
